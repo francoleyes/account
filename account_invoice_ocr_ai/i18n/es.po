@@ -1,0 +1,436 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_invoice_ocr_ai
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-07 21:10+0000\n"
+"PO-Revision-Date: 2026-08-07 21:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid "%(name)s cannot be read, upload a PDF or a picture."
+msgstr "No se puede leer %(name)s, subí un PDF o una imagen."
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,help:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__instructions
+msgid ""
+"Anything the AI should know about these documents, e.g. the layout used by a"
+" vendor."
+msgstr ""
+"Lo que la IA tenga que saber sobre estos documentos, por ejemplo el formato "
+"que usa un proveedor."
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid "Back"
+msgstr "Volver"
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_bill.py:0
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__move_id
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__bill_id
+msgid "Bill"
+msgstr "Factura"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__invoice_date
+msgid "Bill Date"
+msgstr "Fecha de factura"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__ref
+msgid "Bill Reference"
+msgstr "Referencia de la factura"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__attachment_ids
+msgid "Bills"
+msgstr "Facturas"
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid "Bills (pictures or PDF)"
+msgstr "Facturas (fotos o PDF)"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_res_config_settings__account_invoice_ocr_ai_llm_model
+msgid "Bills Digitization Model"
+msgstr "Modelo para digitalizar facturas"
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid "Check what the AI read on each file, then create the drafts."
+msgstr "Revisá lo que la IA leyó en cada archivo y después creá los borradores."
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__ai_product_code
+msgid "Code on File"
+msgstr "Código en el archivo"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__company_id
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__company_id
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model,name:account_invoice_ocr_ai.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid "Create Drafts"
+msgstr "Crear borradores"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__create_uid
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__create_uid
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__create_date
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__create_date
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__currency_id
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__name
+msgid "Description"
+msgstr "Descripción"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.actions.act_window,name:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_action
+#: model:ir.ui.menu,name:account_invoice_ocr_ai.account_invoice_ocr_ai_menu
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.res_config_settings_view_form
+msgid "Digitize Bills with AI"
+msgstr "Digitalizar facturas con IA"
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid "Digitize Vendor Bills"
+msgstr "Digitalizar facturas de proveedor"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__discount
+msgid "Discount (%)"
+msgstr "Descuento (%)"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__display_name
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__display_name
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__display_name
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_bill.py:0
+msgid "Draft created by AI from %s."
+msgstr "Borrador creado por la IA a partir de %s."
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__invoice_date_due
+msgid "Due Date"
+msgstr "Fecha de vencimiento"
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid ""
+"Each file is read as a separate bill, and a draft is created for each one of"
+" them."
+msgstr ""
+"Cada archivo se lee como una factura distinta y se crea un borrador por cada "
+"uno."
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__error
+msgid "Error"
+msgstr "Error"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__amount_total
+msgid "Estimated Total"
+msgstr "Total estimado"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__instructions
+msgid "Extra Instructions"
+msgstr "Instrucciones adicionales"
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid "Extract the data of the attached vendor bill."
+msgstr "Extraé los datos de la factura de proveedor adjunta."
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid "Extract with AI"
+msgstr "Extraer con IA"
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid "Extracted Bill"
+msgstr "Factura extraída"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__bill_ids
+msgid "Extracted Bills"
+msgstr "Facturas extraídas"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__attachment_id
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid "File"
+msgstr "Archivo"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__has_total_mismatch
+msgid "Has Total Mismatch"
+msgstr "Diferencia en el total"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__id
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__id
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__id
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid "Instructions from the user: %s"
+msgstr "Instrucciones del usuario: %s"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__write_uid
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__write_uid
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__write_date
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__write_date
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__line_ids
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.res_config_settings_view_form
+msgid ""
+"Model used to read the bills uploaded from Vendors > Digitize Bills with AI."
+" Its provider is configured in the AI settings."
+msgstr ""
+"Modelo que se usa para leer las facturas subidas desde Proveedores > "
+"Digitalizar facturas con IA. Su proveedor se configura en los ajustes de IA."
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__prices_include_taxes
+msgid "Prices Include Taxes"
+msgstr "Los precios incluyen impuestos"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields.selection,name:account_invoice_ocr_ai.selection__account_invoice_ocr_ai_wizard__state__review
+msgid "Review"
+msgstr "Revisión"
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid "Set the vendor of these bills before creating them: %s"
+msgstr "Completá el proveedor de estas facturas antes de crearlas: %s"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_wizard__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__price_subtotal
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__ai_partner_vat
+msgid "Tax ID on File"
+msgstr "CUIT en el archivo"
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid ""
+"Tax rates configured in the system: %(rates)s. Use the closest one when the "
+"document is not explicit."
+msgstr ""
+"Alícuotas de impuesto configuradas en el sistema: %(rates)s. Usá la más "
+"cercana cuando el documento no sea explícito."
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__tax_ids
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid "The AI answer could not be read."
+msgstr "No se pudo interpretar la respuesta de la IA."
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid ""
+"The bill was received by %(company)s (tax id %(vat)s): that company is the "
+"customer, never the vendor."
+msgstr ""
+"La factura la recibió %(company)s (CUIT %(vat)s): esa compañía es el cliente,"
+" nunca el proveedor."
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid "The document does not look like a vendor bill."
+msgstr "El documento no parece una factura de proveedor."
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid ""
+"The total of the lines does not match the total read on the document, check "
+"the lines."
+msgstr ""
+"El total de las líneas no coincide con el total leído en el documento, "
+"revisá las líneas."
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid "There is no bill to create."
+msgstr "No hay ninguna factura para crear."
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid "Today is %(date)s, use it to solve ambiguous or partial dates."
+msgstr "Hoy es %(date)s, usalo para resolver fechas ambiguas o incompletas."
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__ai_amount_total
+msgid "Total on File"
+msgstr "Total en el archivo"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill_line__price_unit
+msgid "Unit Price"
+msgstr "Precio unitario"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,help:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__prices_include_taxes
+msgid ""
+"Unit prices printed on the document already include taxes. They are "
+"converted when needed."
+msgstr ""
+"Los precios unitarios impresos en el documento ya incluyen impuestos. Se "
+"convierten cuando hace falta."
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields.selection,name:account_invoice_ocr_ai.selection__account_invoice_ocr_ai_wizard__state__upload
+msgid "Upload"
+msgstr "Carga"
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid "Upload at least one bill."
+msgstr "Subí al menos una factura."
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__partner_id
+msgid "Vendor"
+msgstr "Proveedor"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model,name:account_invoice_ocr_ai.model_account_invoice_ocr_ai_bill
+msgid "Vendor Bill Extracted by AI"
+msgstr "Factura de proveedor extraída por IA"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model,name:account_invoice_ocr_ai.model_account_invoice_ocr_ai_bill_line
+msgid "Vendor Bill Line Extracted by AI"
+msgstr "Línea de factura de proveedor extraída por IA"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model,name:account_invoice_ocr_ai.model_account_invoice_ocr_ai_wizard
+msgid "Vendor Bills OCR with Odoo AI"
+msgstr "OCR de facturas de proveedor con la IA de Odoo"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__ai_partner_name
+msgid "Vendor on File"
+msgstr "Proveedor en el archivo"
+
+#. module: account_invoice_ocr_ai
+#: model:ir.model.fields,field_description:account_invoice_ocr_ai.field_account_invoice_ocr_ai_bill__wizard_id
+msgid "Wizard"
+msgstr "Asistente"
+
+#. module: account_invoice_ocr_ai
+#: model_terms:ir.ui.view,arch_db:account_invoice_ocr_ai.account_invoice_ocr_ai_wizard_form
+msgid "e.g. This vendor prints the quantity after the description."
+msgstr "ej. Este proveedor imprime la cantidad después de la descripción."
+
+#. module: account_invoice_ocr_ai
+#. odoo-python
+#: code:addons/account_invoice_ocr_ai/wizard/account_invoice_ocr_ai_wizard.py:0
+msgid "unknown"
+msgstr "desconocido"

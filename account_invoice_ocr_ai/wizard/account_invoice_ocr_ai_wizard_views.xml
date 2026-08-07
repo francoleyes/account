@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_invoice_ocr_ai_wizard_form" model="ir.ui.view">
+        <field name="name">account.invoice.ocr.ai.wizard.form</field>
+        <field name="model">account.invoice.ocr.ai.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Digitize Vendor Bills">
+                <field name="state" invisible="1"/>
+                <field name="company_id" invisible="1"/>
+                <div invisible="state != 'upload'">
+                    <group>
+                        <field name="journal_id" options="{'no_create': True}"/>
+                    </group>
+                    <separator string="Bills (pictures or PDF)"/>
+                    <p class="text-muted">
+                        Each file is read as a separate bill, and a draft is created for each one of them.
+                    </p>
+                    <field name="attachment_ids" widget="many2many_binary" nolabel="1"/>
+                    <group>
+                        <field name="instructions" placeholder="e.g. This vendor prints the quantity after the description."/>
+                    </group>
+                </div>
+                <div invisible="state != 'review'">
+                    <p class="text-muted">
+                        Check what the AI read on each file, then create the drafts.
+                    </p>
+                    <field name="bill_ids" nolabel="1">
+                        <list>
+                            <field name="currency_id" column_invisible="True"/>
+                            <field name="display_name" string="File"/>
+                            <field name="partner_id"/>
+                            <field name="ai_partner_name" optional="hide"/>
+                            <field name="ref"/>
+                            <field name="invoice_date"/>
+                            <field name="amount_total" decoration-danger="has_total_mismatch"/>
+                            <field name="ai_amount_total"/>
+                            <field name="has_total_mismatch" column_invisible="True"/>
+                            <field name="error" decoration-danger="error"/>
+                        </list>
+                        <form string="Extracted Bill">
+                            <div class="alert alert-danger" role="alert" invisible="not error">
+                                <field name="error" nolabel="1" readonly="1"/>
+                            </div>
+                            <div invisible="error">
+                                <group>
+                                    <group>
+                                        <field name="company_id" invisible="1"/>
+                                        <field name="partner_id"/>
+                                        <field name="ai_partner_name"/>
+                                        <field name="ai_partner_vat"/>
+                                        <field name="ref"/>
+                                    </group>
+                                    <group>
+                                        <field name="invoice_date"/>
+                                        <field name="invoice_date_due"/>
+                                        <field name="currency_id" options="{'no_create': True}"/>
+                                        <field name="prices_include_taxes"/>
+                                    </group>
+                                </group>
+                                <div class="alert alert-warning" role="alert" invisible="not has_total_mismatch">
+                                    The total of the lines does not match the total read on the document, check the lines.
+                                </div>
+                                <field name="line_ids">
+                                    <list editable="bottom">
+                                        <field name="company_id" column_invisible="True"/>
+                                        <field name="currency_id" column_invisible="True"/>
+                                        <field name="name"/>
+                                        <field name="ai_product_code" optional="show"/>
+                                        <field name="product_id"/>
+                                        <field name="quantity"/>
+                                        <field name="price_unit"/>
+                                        <field name="discount"/>
+                                        <field name="tax_ids" widget="many2many_tags"/>
+                                        <field name="price_subtotal"/>
+                                    </list>
+                                </field>
+                                <group class="oe_subtotal_footer">
+                                    <field name="has_total_mismatch" invisible="1"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="ai_amount_total"/>
+                                    <field name="amount_total"/>
+                                </group>
+                            </div>
+                        </form>
+                    </field>
+                </div>
+                <footer>
+                    <button name="action_extract" string="Extract with AI" type="object"
+                            class="btn-primary" invisible="state != 'upload'"/>
+                    <button name="action_create_bills" string="Create Drafts" type="object"
+                            class="btn-primary" invisible="state != 'review'"/>
+                    <button name="action_back" string="Back" type="object"
+                            class="btn-secondary" invisible="state != 'review'"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="account_invoice_ocr_ai_wizard_action" model="ir.actions.act_window">
+        <field name="name">Digitize Bills with AI</field>
+        <field name="res_model">account.invoice.ocr.ai.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="account_invoice_ocr_ai_menu"
+              name="Digitize Bills with AI"
+              parent="account.menu_finance_payables"
+              action="account_invoice_ocr_ai_wizard_action"
+              groups="account.group_account_invoice"
+              sequence="25"/>
+
+</odoo>
